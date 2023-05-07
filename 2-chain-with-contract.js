@@ -4,7 +4,6 @@ const chain = () => {
     const dummy = () => {
     };
     const store = [];
-    let count = 0;
     console.log('Start!');
     const map = () => chain;
     map.add = (...args) => (ms) => {
@@ -19,7 +18,6 @@ const chain = () => {
             f_obj.callback(...data);
         });
         store.push(f_obj);
-        count++;
         return map;
     };
     const f_nx = (fn, ms = 1) => nx => (...args) => {
